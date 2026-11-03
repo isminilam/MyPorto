@@ -114,7 +114,7 @@ export const personalInfo: PersonalInfo = {
   location: 'Bekasi, Indonesia',
   university: 'Universitas Gunadarma',
   degree: 'S1 Informatika',
-  bio: `Passionate about Data Analytics, Data Science, Data Engineering, and Machine Learning, with hands-on experience gained through academic and collaborative projects. Have contributed to various data and technology projects, combining technical skills with analytical thinking and teamwork. Looking for opportunities to build a career in the data field and contribute to data-driven projects that support effective solutions and informed decision-making.`,
+  bio: `Bachelor of Informatics graduate from Gunadarma University with experienced in Data Analytics, Data Science, Machine Learning, and Data Engineering. Through academic and collaborative projects, I have developed experience in analyzing data, building machine learning models, and contributing to the development of AI-powered applications.`,
   resumeUrl: '/Ismi_Nilam_Anggraini_CV.pdf',
   social: {
     github: 'https://github.com/isminilam',

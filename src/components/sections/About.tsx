@@ -74,16 +74,14 @@ export default function About() {
 
             <div className="text-gray-300 text-sm sm:text-[15px] leading-relaxed space-y-3">
               <p>
-                Passionate about{' '}
+                Bachelor of Informatics graduate from Gunadarma University with experienced in{' '}
                 <span className="text-white font-medium">Data Analytics</span>,{' '}
                 <span className="text-white font-medium">Data Science</span>,{' '}
-                <span className="text-white font-medium">Data Engineering</span>, and{' '}
-                <span className="text-white font-medium">Machine Learning</span>, with hands-on
-                experience gained through academic and collaborative projects.
+                <span className="text-white font-medium">Machine Learning</span>, and{' '}
+                <span className="text-white font-medium">Data Engineering</span>.
               </p>
               <p className="text-gray-400">
-                Combining technical proficiency with analytical problem-solving to build impactful
-                data-driven solutions that support effective decision-making.
+                Through academic and collaborative projects, I have developed experience in analyzing data, building machine learning models, and contributing to the development of AI-powered applications.
               </p>
             </div>
           </div>
