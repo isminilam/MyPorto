@@ -118,10 +118,10 @@ export default function About() {
             </div>
           </div>
 
-          {/* Bottom: CTA row (aligned with the same 2-column grid) */}
-          <div className="mt-6 grid grid-cols-2 gap-4 sm:gap-6 items-center">
+          {/* Bottom: CTA + Social Links row */}
+          <div className="mt-6 grid grid-cols-2 gap-4 sm:gap-6 items-start">
             {/* Left: Download CV (under Education) */}
-            <div>
+            <div className="pt-0.5">
               <a
                 href={personalInfo.resumeUrl}
                 target="_blank"
@@ -133,20 +133,17 @@ export default function About() {
               </a>
             </div>
 
-            {/* Right: LinkedIn, GitHub & Email (under Focus) */}
-            <div className="flex items-center gap-5">
+            {/* Right: LinkedIn, GitHub & Email stacked vertically (under Focus) */}
+            <div className="flex flex-col gap-2.5">
               {personalInfo.social.linkedin && (
                 <a
                   href={personalInfo.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-gray-400 hover:text-white font-medium transition-colors group"
+                  className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-white font-medium transition-colors group"
                 >
+                  <ArrowUpRight size={13} className="text-gray-500 group-hover:text-primary-400 transition-colors shrink-0" />
                   <span>LinkedIn</span>
-                  <ArrowUpRight
-                    size={14}
-                    className="text-gray-500 group-hover:text-primary-400 transition-colors"
-                  />
                 </a>
               )}
 
@@ -155,23 +152,20 @@ export default function About() {
                   href={personalInfo.social.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-gray-400 hover:text-white font-medium transition-colors group"
+                  className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-white font-medium transition-colors group"
                 >
+                  <ArrowUpRight size={13} className="text-gray-500 group-hover:text-primary-400 transition-colors shrink-0" />
                   <span>GitHub</span>
-                  <ArrowUpRight
-                    size={14}
-                    className="text-gray-500 group-hover:text-primary-400 transition-colors"
-                  />
                 </a>
               )}
 
               {personalInfo.email && (
                 <a
                   href={`mailto:${personalInfo.email}`}
-                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-gray-400 hover:text-white font-medium transition-colors group"
+                  className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-white font-medium transition-colors group"
                 >
-                  <Mail size={13} className="text-gray-500 group-hover:text-primary-400 transition-colors" />
-                  <span>Email</span>
+                  <Mail size={13} className="text-gray-500 group-hover:text-primary-400 transition-colors shrink-0" />
+                  <span className="truncate">{personalInfo.email}</span>
                 </a>
               )}
             </div>
