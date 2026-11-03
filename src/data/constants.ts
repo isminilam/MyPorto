@@ -259,11 +259,11 @@ export const projects: ProjectItem[] = [
     image: '/sales_dashboard.png',
   },
   {
-    title: 'Upcoming / New Project',
+    title: 'Superstore Sales Analysis',
     description:
-      'Deskripsi proyek dummy. Anda bisa mengganti teks ini dengan penjelasan proyek, arsitektur yang digunakan, fitur utama, dan hasil yang diperoleh.',
+      'Analyzed the Superstore Sales dataset using Excel by creating PivotTables to explore sales and profitability, identifying key business insights and performance trends, and developing an interactive dashboard to visualize the findings.',
     tags: ['Python', 'FastAPI', 'React'],
-    category: 'Software Development',
+    category: 'Data Analytics',
     github: '',
     demo: '',
     image: '',
