@@ -249,9 +249,9 @@ export const projects: ProjectItem[] = [
     image: '/diagnosmart.png',
   },
   {
-    title: 'Sales Marketing Dashboard',
+    title: 'Sales Supermarket Dashboard',
     description:
-      '',
+      'Analyzed the Supermarket Sales dataset using Power BI to explore sales, revenue, profit, product performance, and customer trends through interactive visualizations, KPIs, and slicers to identify key business insights.',
     tags: ['Power BI'],
     category: 'Data Analytics',
     github: '',
