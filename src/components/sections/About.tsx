@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import Image from 'next/image';
-import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Mail } from 'lucide-react';
 import { personalInfo } from '../../data/constants';
 import { gsap, useGSAP } from '../../lib/gsap';
 
@@ -165,6 +165,19 @@ export default function About() {
                 </a>
               )}
             </div>
+          </div>
+
+          {/* Email row */}
+          <div className="mt-4 pt-4 border-t border-white/[0.06]">
+            <a
+              href={`mailto:${personalInfo.email}`}
+              className="inline-flex items-center gap-2 text-xs text-gray-400 hover:text-primary-400 transition-colors group"
+            >
+              <span className="p-1 rounded-md bg-white/5 group-hover:bg-primary-500/15 border border-white/10 group-hover:border-primary-500/25 transition-all">
+                <Mail size={11} className="text-gray-400 group-hover:text-primary-400 transition-colors" />
+              </span>
+              <span className="font-mono tracking-tight">{personalInfo.email}</span>
+            </a>
           </div>
         </div>
       </div>

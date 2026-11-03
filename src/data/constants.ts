@@ -134,6 +134,7 @@ export const navLinks: NavLink[] = [
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
   { label: 'Certifications', href: '#certifications' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 /* ============================
