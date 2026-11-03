@@ -5,7 +5,6 @@ import Skills from '@/components/sections/Skills';
 import Projects from '@/components/sections/Projects';
 import Experience from '@/components/sections/Experience';
 import Certifications from '@/components/sections/Certifications';
-import Contact from '@/components/sections/Contact';
 import Footer from '@/components/sections/Footer';
 import SectionDivider from '@/components/ui/SectionDivider';
 import ThreeBackground from '@/components/3d/ThreeBackground';
@@ -30,8 +29,6 @@ export default function Home() {
           <Experience />
           <SectionDivider />
           <Certifications />
-          <SectionDivider />
-          <Contact />
         </main>
         <Footer />
       </div>

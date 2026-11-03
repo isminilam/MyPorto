@@ -42,16 +42,16 @@ export function useActiveSection(): string {
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
-    const navSectionIds = ['about', 'skills', 'projects', 'experience', 'certifications', 'contact'];
+    const navSectionIds = ['about', 'skills', 'projects', 'experience', 'certifications'];
 
     const updateActiveSection = () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       const docHeight = document.documentElement.scrollHeight;
 
-      // When at the very bottom of the document, activate 'contact'
+      // When at the very bottom of the document, activate the last section ('certifications')
       if (scrollY + windowHeight >= docHeight - 70) {
-        setActiveSection('contact');
+        setActiveSection('certifications');
         return;
       }
 
