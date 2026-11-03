@@ -18,44 +18,30 @@ export default function ContactForm() {
     setStatus('idle');
 
     try {
-      // Send directly via FormSubmit AJAX
-      const res = await fetch(`https://formsubmit.co/ajax/${personalInfo.email}`, {
+      // Send via internal Next.js API route to avoid browser AdBlockers and CORS
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Accept: 'application/json',
         },
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          _subject: `New Portfolio Inquiry from ${formData.name}`,
-          _template: 'table',
-          _captcha: 'false',
         }),
       });
 
-      if (res.ok) {
+      const data = await res.json().catch(() => null);
+
+      if (res.ok && data?.success) {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
         setTimeout(() => setStatus('idle'), 6000);
       } else {
-        // Fallback: direct mailto in case of CORS or submission limit
-        window.location.href = `mailto:${personalInfo.email}?subject=Contact from ${encodeURIComponent(
-          formData.name
-        )}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${encodeURIComponent(
-          formData.email
-        )}`;
-        setStatus('success');
+        setStatus('error');
       }
     } catch {
-      // Network or Adblock fallback
-      window.location.href = `mailto:${personalInfo.email}?subject=Contact from ${encodeURIComponent(
-        formData.name
-      )}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${encodeURIComponent(
-        formData.email
-      )}`;
-      setStatus('success');
+      setStatus('error');
     } finally {
       setLoading(false);
     }
@@ -142,9 +128,19 @@ export default function ContactForm() {
         )}
 
         {status === 'error' && (
-          <div className="mt-3 p-3 rounded-xl bg-red-500/15 border border-red-500/30 flex items-center gap-2.5 text-xs text-red-300">
-            <AlertCircle size={16} className="text-red-400 shrink-0" />
-            <span>Terjadi kendala pengiriman. Silakan kirim langsung via email ke isminilamng@gmail.com</span>
+          <div className="mt-3 p-3 rounded-xl bg-red-500/15 border border-red-500/30 flex items-start gap-2.5 text-xs text-red-300">
+            <AlertCircle size={16} className="text-red-400 shrink-0 mt-0.5" />
+            <div>
+              <span>Terjadi kendala pengiriman. Silakan hubungi langsung ke{' '}</span>
+              <a
+                href={`mailto:${personalInfo.email}?subject=Portfolio Contact from ${encodeURIComponent(
+                  formData.name || 'Visitor'
+                )}`}
+                className="underline text-white font-medium hover:text-primary-300"
+              >
+                {personalInfo.email}
+              </a>
+            </div>
           </div>
         )}
 
