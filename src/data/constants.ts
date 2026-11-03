@@ -64,9 +64,11 @@ export interface ProjectItem {
   description: string;
   tags: string[];
   category: string;
-  github: string | null;
-  demo: string | null;
+  github?: string | null;
+  demo?: string | null;
   image: string | null;
+  downloadUrl?: string | null;
+  downloadLabel?: string | null;
 }
 
 export interface ExperienceItem {
