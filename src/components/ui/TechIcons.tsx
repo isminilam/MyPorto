@@ -108,6 +108,24 @@ export function MicrosoftOfficeIcon({ size = 32, className = '' }: TechIconProps
   );
 }
 
+// 6b. Microsoft Excel Official Logo
+export function ExcelIcon({ size = 32, className = '' }: TechIconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
+      <path d="M14.5 4H20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-5.5V4z" fill="#185C37" />
+      <path d="M14.5 4H20a1 1 0 0 1 1 1v3H14.5V4z" fill="#33C481" />
+      <path d="M14.5 8H21v4h-6.5V8z" fill="#21A366" />
+      <path d="M14.5 12H21v4h-6.5V12z" fill="#107C41" />
+      <path d="M14.5 16H21v3a1 1 0 0 1-1 1h-5.5v-4z" fill="#185C37" />
+      <rect x="2.5" y="4.5" width="12" height="15" rx="1.5" fill="#107C41" />
+      <path
+        d="M5.8 8.5h1.6l1.3 2.5 1.3-2.5h1.6l-2.1 3.5 2.2 3.5h-1.6l-1.4-2.5-1.4 2.5H5.7l2.2-3.5L5.8 8.5z"
+        fill="#FFFFFF"
+      />
+    </svg>
+  );
+}
+
 // 7. Google Workspace Official 4-Color Logo
 export function GoogleWorkspaceIcon({ size = 32, className = '' }: TechIconProps) {
   return (
@@ -374,6 +392,7 @@ export function TechTagIcon({ name, size = 14, className = '' }: { name: string;
   if (normalized.includes('fastapi')) return <FastAPIIcon size={size} className={className} />;
   if (normalized.includes('tensorflow')) return <TensorFlowIcon size={size} className={className} />;
   if (normalized.includes('power bi')) return <PowerBiIcon size={size} className={className} />;
+  if (normalized.includes('excel')) return <ExcelIcon size={size} className={className} />;
   if (normalized.includes('streamlit')) return <StreamlitIcon size={size} className={className} />;
   if (normalized.includes('html')) return <HtmlIcon size={size} className={className} />;
   if (normalized.includes('git')) return <GitIcon size={size} className={className} />;
