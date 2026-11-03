@@ -8,6 +8,7 @@ import {
   BarChart3,
   Code2,
   ZoomIn,
+  Download,
   type LucideIcon,
 } from 'lucide-react';
 import { GithubIcon } from '../../ui/Icons';
@@ -253,7 +254,7 @@ export default function ProjectCard({
         </div>
 
         {/* Action Links */}
-        {(project.demo || project.github) && (
+        {(project.demo || project.github || project.downloadUrl) && (
           <div className="flex flex-wrap items-center gap-2.5 pt-3.5 border-t border-white/10">
             {project.demo && (
               <a
@@ -275,6 +276,16 @@ export default function ProjectCard({
               >
                 <GithubIcon size={13} />
                 Source Code
+              </a>
+            )}
+            {project.downloadUrl && (
+              <a
+                href={project.downloadUrl}
+                download
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-primary-600 hover:bg-primary-500 text-white shadow-md shadow-primary-600/20 transition-all duration-300 hover:scale-105 cursor-pointer"
+              >
+                <Download size={13} />
+                {project.downloadLabel || 'Download File'}
               </a>
             )}
           </div>

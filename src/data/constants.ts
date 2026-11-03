@@ -236,8 +236,8 @@ export const projects: ProjectItem[] = [
       'The MaintEase platform is an AI-powered predictive maintenance solution that uses machine learning models to predict potential machine failures and help users take preventive action before breakdowns occur. It also integrates an AI chatbot to provide quick, accessible information and support users in understanding machine conditions and maintenance insights.',
     tags: ['Python', 'React', 'Express.js', 'Node.js', 'Tailwind CSS', 'Supabase', 'OpenAI API'],
     category: 'Data Science & Web Development',
-    github: '',
-    demo: '',
+    github: null,
+    demo: null,
     image: '/maintease.png',
   },
   {
@@ -256,8 +256,9 @@ export const projects: ProjectItem[] = [
       'Analyzed the Supermarket Sales dataset using Power BI to explore sales, revenue, profit, product performance, and customer trends through interactive visualizations, KPIs, and slicers to identify key business insights.',
     tags: ['Power BI'],
     category: 'Data Analytics',
-    github: '',
-    demo: '',
+    github: null,
+    demo: null,
+    downloadUrl: '/Sales_Supermarket_Dashboard_2019.pbix',
     image: '/sales_dashboard.png',
   },
   {
@@ -266,9 +267,10 @@ export const projects: ProjectItem[] = [
       'Analyzed the Superstore Sales dataset using Excel by creating PivotTables to explore sales and profitability, identifying key business insights and performance trends, and developing an interactive dashboard to visualize the findings.',
     tags: ['Microsoft Excel'],
     category: 'Data Analytics',
-    github: '',
-    demo: '',
-    image: '/SuperstoreSalesDashboard.jpeg',
+    github: null,
+    demo: null,
+    downloadUrl: '/Superstore_Sales_Analysis.xlsx',
+    image: '/SuperstoreSalesAnalysis.jpeg',
   },
 ];
 
