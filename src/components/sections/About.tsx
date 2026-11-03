@@ -133,7 +133,7 @@ export default function About() {
               </a>
             </div>
 
-            {/* Right: LinkedIn & GitHub (under Focus) */}
+            {/* Right: LinkedIn, GitHub & Email (under Focus) */}
             <div className="flex items-center gap-5">
               {personalInfo.social.linkedin && (
                 <a
@@ -164,20 +164,17 @@ export default function About() {
                   />
                 </a>
               )}
-            </div>
-          </div>
 
-          {/* Email row */}
-          <div className="mt-4 pt-4 border-t border-white/[0.06]">
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="inline-flex items-center gap-2 text-xs text-gray-400 hover:text-primary-400 transition-colors group"
-            >
-              <span className="p-1 rounded-md bg-white/5 group-hover:bg-primary-500/15 border border-white/10 group-hover:border-primary-500/25 transition-all">
-                <Mail size={11} className="text-gray-400 group-hover:text-primary-400 transition-colors" />
-              </span>
-              <span className="font-mono tracking-tight">{personalInfo.email}</span>
-            </a>
+              {personalInfo.email && (
+                <a
+                  href={`mailto:${personalInfo.email}`}
+                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-gray-400 hover:text-white font-medium transition-colors group"
+                >
+                  <Mail size={13} className="text-gray-500 group-hover:text-primary-400 transition-colors" />
+                  <span>Email</span>
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </div>
