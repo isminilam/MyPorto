@@ -336,6 +336,13 @@ export const education: EducationItem[] = [
    ============================ */
 export const certifications: CertificationItem[] = [
   {
+    title: 'Associate Data Engineer',
+    issuer: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+    date: 'Jul 2026',
+    credentialUrl: '/Sertifikat_BNSP_IDM.pdf',
+    image: '/cert_bnsp_idm.webp',
+  },
+  {
     title: 'Asah led by Dicoding 2025',
     issuer: 'Dicoding',
     date: 'Jan 2026',
@@ -363,7 +370,7 @@ export const certifications: CertificationItem[] = [
    ============================ */
 export const stats: StatItem[] = [
   { label: 'Projects Completed', value: '15+' },
-  { label: 'Certifications', value: '3' },
+  { label: 'Certifications', value: '4' },
   { label: 'GitHub Contributions', value: '500+' },
   { label: 'GPA', value: '3.85' },
 ];

@@ -2,7 +2,6 @@
 
 import React, { useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
-import { personalInfo } from '../../data/constants';
 import Button from '../ui/Button';
 import { gsap, useGSAP } from '../../lib/gsap';
 
@@ -58,15 +57,9 @@ export default function Hero() {
           '-=0.35'
         )
         .fromTo(
-          '.hero-subtitle',
-          { y: 25, opacity: 0, filter: 'blur(4px)' },
-          { y: 0, opacity: 1, filter: 'blur(0px)', duration: 0.7, ease: 'power2.out' },
-          '-=0.5'
-        )
-        .fromTo(
           '.hero-cta',
           { scale: 0.85, opacity: 0, y: 15 },
-          { scale: 1, opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'back.out(1.5)' },
+          { scale: 1, opacity: 1, y: 0, duration: 0.6, ease: 'back.out(1.5)' },
           '-=0.35'
         )
         .fromTo(
@@ -134,7 +127,7 @@ export default function Hero() {
         </div>
 
         {/* Name with masked overflow-hidden word reveal */}
-        <h1 className="hero-name font-[family-name:var(--font-heading)] text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight mb-4 text-balance leading-[1.12]">
+        <h1 className="hero-name font-[family-name:var(--font-heading)] text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight mb-8 text-balance leading-[1.12]">
           <span className="inline-block overflow-hidden py-1">
             <span className="hero-name-word inline-block bg-gradient-to-r from-primary-300 via-accent-300 to-indigo-200 bg-clip-text text-transparent drop-shadow-[0_10px_35px_rgba(99,102,241,0.25)]">
               Ismi
@@ -152,22 +145,12 @@ export default function Hero() {
           </span>
         </h1>
 
-        {/* Role subtitle */}
-        <p className="hero-subtitle font-[family-name:var(--font-heading)] text-base sm:text-lg md:text-xl font-medium tracking-wide text-gray-300 mb-9 max-w-2xl mx-auto">
-          {personalInfo.subtitle}
-        </p>
-
-        {/* CTA Buttons */}
+        {/* CTA Button */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <div className="hero-cta">
             <Button href="#projects">
               View My Work
               <ArrowDown size={16} />
-            </Button>
-          </div>
-          <div className="hero-cta">
-            <Button href="#contact" variant="secondary">
-              Get In Touch
             </Button>
           </div>
         </div>
