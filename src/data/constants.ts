@@ -262,11 +262,11 @@ export const projects: ProjectItem[] = [
     title: 'Superstore Sales Analysis',
     description:
       'Analyzed the Superstore Sales dataset using Excel by creating PivotTables to explore sales and profitability, identifying key business insights and performance trends, and developing an interactive dashboard to visualize the findings.',
-    tags: ['Python', 'FastAPI', 'React'],
+    tags: ['Microsoft Excel'],
     category: 'Data Analytics',
     github: '',
     demo: '',
-    image: '',
+    image: '/SuperstoreSalesDashboard.jpeg',
   },
 ];
 
